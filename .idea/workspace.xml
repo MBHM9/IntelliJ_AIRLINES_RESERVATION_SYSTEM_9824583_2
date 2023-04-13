@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="create Flight schedule class and set parameters">
-      <change afterPath="$PROJECT_DIR$/src/Passenger_data.java" afterDir="false" />
+    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="create admin data class and set parameters">
+      <change afterPath="$PROJECT_DIR$/src/Admin_data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/T8/java/IntelliJ_AIRLINES_RESERVATION_SYSTEM_9824583/src/User_Pass.java"
+    "last_opened_file_path": "E:/T8/java/IntelliJ_AIRLINES_RESERVATION_SYSTEM_9824583/src/User_Pass_admin.java"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -47,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681417994876</updated>
-      <workItem from="1681417996096" duration="1234000" />
+      <workItem from="1681417996096" duration="1816000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -84,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681419035714</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="create passengers data class and set parameters">
+      <created>1681419270558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681419270558</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +111,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create start menu and comment out" />
     <MESSAGE value="create Flight schedule class and set parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Flight schedule class and set parameters" />
+    <MESSAGE value="create passengers data class and set parameters" />
+    <MESSAGE value="create admin data class and set parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="create admin data class and set parameters" />
   </component>
 </project>
