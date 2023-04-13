@@ -22,7 +22,6 @@ public class Main {
 
             }else {
                 System.out.println("Wrong!");
-
             }
         }
     }
