@@ -40,9 +40,52 @@ public class Main {
                     Admin_data_Login = Login_set.find_admin(user_enter, pass_enter);
                     if(Admin_data_Login == null){
                         System.out.println("user not found!");
-                    }else{
+                    } else {
                         /////////////start admin menu
                         System.out.println("444444444444");
+                    }
+                } else {
+                    /////////////start passenger menu
+                    boolean passenger_menu = true;
+                    while (passenger_menu) {
+                        System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                        System.out.println("                  PASSENGER MENU OPTION");
+                        System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                        System.out.println("..........................................................");
+                        System.out.println("<1> Change password");
+                        System.out.println("<2> Search flight tickets");
+                        System.out.println("<3> Booking ticket");
+                        System.out.println("<4> Ticket cancellation");
+                        System.out.println("<5> Booked ticket");
+                        System.out.println("<6> Add charge");
+                        System.out.println("<0> Sign out");
+                        String enter_option_user = input.next();
+                        if (enter_option_user.equals("0")) {/////////////<0> Sign out
+                            passenger_menu = false;
+                        } else if (enter_option_user.equals("1")) {///////////<1> Change password
+                            System.out.println("Enter old password:");
+                            String old_pass = input.next();
+                            if(old_pass.equals(Passenger_login.getPass())){
+                                System.out.println("Enter new password:");
+                                String new_pass = input.next();
+                                Passenger_login = Login_set.change_pass_user(user_enter, new_pass);
+                                System.out.println("Password changed\nnew password : "+new_pass);
+                            }else {
+                                System.out.println("old pass is wrong!");
+                            }
+                        } else if (enter_option_user.equals("2")) {///////////<2> Search flight tickets
+
+                        } else if (enter_option_user.equals("3")) {///////////<3> Booking ticket
+
+                        } else if (enter_option_user.equals("4")) {///////////<4> Ticket cancellation
+
+                        } else if (enter_option_user.equals("5")) {///////////<5> Booked ticket
+
+                        } else if (enter_option_user.equals("6")) {///////////<6> Add charge
+
+                        } else {
+                            System.out.println("Wrong operand try again!");
+                        }
                     }
                 }
             }else if(menu_get.equals("2")){////////////<2> Sign up
