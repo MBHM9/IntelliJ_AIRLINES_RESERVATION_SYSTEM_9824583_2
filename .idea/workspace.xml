@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="create admin data class and set parameters">
-      <change afterPath="$PROJECT_DIR$/src/Login_set.java" afterDir="false" />
+    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="create login file and set parameters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login_set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_set.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681417994876</updated>
       <workItem from="1681417996096" duration="2474000" />
-      <workItem from="1681480497011" duration="269000" />
+      <workItem from="1681480497011" duration="384000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -100,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681419868490</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="create login file and set parameters">
+      <created>1681480812663</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681480812663</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +128,7 @@
     <MESSAGE value="create Flight schedule class and set parameters" />
     <MESSAGE value="create passengers data class and set parameters" />
     <MESSAGE value="create admin data class and set parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="create admin data class and set parameters" />
+    <MESSAGE value="create login file and set parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="create login file and set parameters" />
   </component>
 </project>

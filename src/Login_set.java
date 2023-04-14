@@ -27,7 +27,24 @@ public class Login_set {
 
 
 
+    public Passenger_data find_user (String user_f, String pass_f){
+        for (int i = 0; i < Passenger_data.length; i++) {
+            if(Passenger_data[i]!=null && Passenger_data[i].getUser().equals(user_f) && Passenger_data[i].getPass().equals(pass_f) ){
+                return Passenger_data[i];
+            }
+        }
+        return null;
+    }
 
+    public Passenger_data change_pass_user (String user_f, String pass_f){
+        for (int i = 0; i < Passenger_data.length; i++) {
+            if(Passenger_data[i]!=null && Passenger_data[i].getUser().equals(user_f)){
+                Passenger_data[i].setPass(pass_f);
+                return Passenger_data[i];
+            }
+        }
+        return null;
+    }
 
 
 
