@@ -33,8 +33,10 @@ public class Main {
 
             }else if(menu_get.equals("2")){////////////<2> Sign up
                 System.out.println("Enter your user name:");
-
+                String user_new = input.next();
                 System.out.println("Enter your user password:");
+                String pass_new = input.next();
+
             }else {
                 System.out.println("Wrong!");
             }
