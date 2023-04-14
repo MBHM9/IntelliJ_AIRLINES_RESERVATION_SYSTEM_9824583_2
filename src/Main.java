@@ -18,6 +18,7 @@ public class Main {
 
         Login_set Login_set = new Login_set(Passenger_data, Admin_data);
         Passenger_data Passenger_login = new Passenger_data(null, null, 0, null);
+        Admin_data Admin_data_Login = new Admin_data(null, null);
 
         Scanner input = new Scanner(System.in);
         System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
@@ -30,24 +31,33 @@ public class Main {
             String menu_get = input.next();
 
             if (menu_get.equals("1")) {////////////<1> Sign in
-
+                System.out.println("Enter user:");
+                String user_enter = input.next();
+                System.out.println("Enter pass:");
+                String pass_enter = input.next();
+                Passenger_login = Login_set.find_user(user_enter, pass_enter);
+                if (Passenger_login == null) {
+                    Admin_data_Login = Login_set.find_admin(user_enter, pass_enter);
+                    if(Admin_data_Login == null){
+                        System.out.println("user not found!");
+                    }else{
+                        /////////////start admin menu
+                        System.out.println("444444444444");
+                    }
+                }
             }else if(menu_get.equals("2")){////////////<2> Sign up
                 System.out.println("Enter your user name:");
                 String user_new = input.next();
                 boolean check_user = Login_set.check_new_user(user_new);
-                if(check_user == true){
+                if(check_user == true){/////////////add user
                     System.out.println("Enter your user password:");
                     String pass_new = input.next();
                     int free_space = Login_set.find_space();
                     Passenger_data[free_space] = new Passenger_data(user_new, pass_new, 0, null);
-
                     System.out.println("welcome to airline\nUser : "+Passenger_data[free_space].getUser()+"\nPass : "+Passenger_data[free_space].getPass());
                 }else {
                     System.out.println("The username is already used!");
                 }
-
-
-
             }else {
                 System.out.println("Wrong!");
             }
