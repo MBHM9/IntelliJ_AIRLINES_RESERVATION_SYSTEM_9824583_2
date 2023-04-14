@@ -19,7 +19,9 @@ public class Main {
             if (menu_get.equals("1")) {////////////<1> Sign in
 
             }else if(menu_get.equals("2")){////////////<2> Sign up
+                System.out.println("Enter your user name:");
 
+                System.out.println("Enter your user password:");
             }else {
                 System.out.println("Wrong!");
             }

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="create admin data class and set parameters">
-      <change afterPath="$PROJECT_DIR$/src/Admin_data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login_set.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/T8/java/IntelliJ_AIRLINES_RESERVATION_SYSTEM_9824583/src/User_Pass_admin.java"
+    "last_opened_file_path": "E:/T8/java/IntelliJ_AIRLINES_RESERVATION_SYSTEM_9824583/src/Login.java"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -47,7 +48,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681417994876</updated>
-      <workItem from="1681417996096" duration="1816000" />
+      <workItem from="1681417996096" duration="2474000" />
+      <workItem from="1681480497011" duration="269000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -91,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681419270558</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create admin data class and set parameters">
+      <created>1681419868490</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681419868490</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
