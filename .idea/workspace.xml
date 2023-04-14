@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="set function for find user by username and password &#10;&#10;set change password by user and pass old">
+    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="set function add new user and check is not match to anyone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login_set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681417994876</updated>
       <workItem from="1681417996096" duration="2474000" />
-      <workItem from="1681480497011" duration="1013000" />
+      <workItem from="1681480497011" duration="1231000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681480975800</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="set function add new user and check is not match to anyone">
+      <created>1681481636482</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681481636482</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +144,7 @@
     <MESSAGE value="create admin data class and set parameters" />
     <MESSAGE value="create login file and set parameters" />
     <MESSAGE value="set function for find user by username and password &#10;&#10;set change password by user and pass old" />
-    <option name="LAST_COMMIT_MESSAGE" value="set function for find user by username and password &#10;&#10;set change password by user and pass old" />
+    <MESSAGE value="set function add new user and check is not match to anyone" />
+    <option name="LAST_COMMIT_MESSAGE" value="set function add new user and check is not match to anyone" />
   </component>
 </project>
