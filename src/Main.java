@@ -16,8 +16,8 @@ public class Main {
         Admin_data[0] = new Admin_data("admin1", "123456");
         Admin_data[1] = new Admin_data("admin2", "78910");
 
-
-
+        Login_set Login_set = new Login_set(Passenger_data, Admin_data);
+        Passenger_data Passenger_login = new Passenger_data(null, null, 0, null);
 
         Scanner input = new Scanner(System.in);
         System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
@@ -34,8 +34,19 @@ public class Main {
             }else if(menu_get.equals("2")){////////////<2> Sign up
                 System.out.println("Enter your user name:");
                 String user_new = input.next();
-                System.out.println("Enter your user password:");
-                String pass_new = input.next();
+                boolean check_user = Login_set.check_new_user(user_new);
+                if(check_user == true){
+                    System.out.println("Enter your user password:");
+                    String pass_new = input.next();
+                    int free_space = Login_set.find_space();
+                    Passenger_data[free_space] = new Passenger_data(user_new, pass_new, 0, null);
+
+                    System.out.println("welcome to airline\nUser : "+Passenger_data[free_space].getUser()+"\nPass : "+Passenger_data[free_space].getPass());
+                }else {
+                    System.out.println("The username is already used!");
+                }
+
+
 
             }else {
                 System.out.println("Wrong!");

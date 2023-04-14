@@ -55,22 +55,13 @@ public class Login_set {
         return true;
     }
 
-    public boolean check_new_pass (String pass_n){
+    public int find_space (){
         for (int i = 0; i < Passenger_data.length; i++) {
-            if( Passenger_data[i]!=null && Passenger_data[i].getPass().equals(pass_n) ){
-                return false;
+            if( Passenger_data[i] == null){
+                return i;
             }
         }
-        return true;
-    }
-
-    public Passenger_data add_user (String user_a, String pass_a){
-        int len = Passenger_data.length;
-        Passenger_data[len].setUser(user_a);
-        Passenger_data[len].setPass(pass_a);
-        Passenger_data[len].setCharge(0);
-        Passenger_data[len].setTickets(null);
-        return Passenger_data[len];
+        return 0;
     }
 
 

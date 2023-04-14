@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="add sample data for admin user and flights for test code">
+    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="add function for check user and pass match to same data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login_set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_set.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -49,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681417994876</updated>
       <workItem from="1681417996096" duration="2474000" />
-      <workItem from="1681480497011" duration="1474000" />
+      <workItem from="1681480497011" duration="4989000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -128,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681481778605</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add function for check user and pass match to same data">
+      <created>1681482033705</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681482033705</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +161,7 @@
     <MESSAGE value="set function for find user by username and password &#10;&#10;set change password by user and pass old" />
     <MESSAGE value="set function add new user and check is not match to anyone" />
     <MESSAGE value="add sample data for admin user and flights for test code" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sample data for admin user and flights for test code" />
+    <MESSAGE value="add function for check user and pass match to same data" />
+    <option name="LAST_COMMIT_MESSAGE" value="add function for check user and pass match to same data" />
   </component>
 </project>
