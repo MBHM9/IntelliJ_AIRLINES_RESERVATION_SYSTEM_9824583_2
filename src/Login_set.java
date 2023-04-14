@@ -46,6 +46,20 @@ public class Login_set {
         return null;
     }
 
+    public Passenger_data add_user (String user_a, String pass_a){
+        int len = Passenger_data.length;
+        for (int i = 0; i < len; i++) {
+            if(Passenger_data[i]!=null && Passenger_data[i].getUser().equals(user_a) && Passenger_data[i].getPass().equals(pass_a)){
+                return null;
+            }
+        }
+        Passenger_data[len].setUser(user_a);
+        Passenger_data[len].setPass(pass_a);
+        Passenger_data[len].setCharge(0);
+        Passenger_data[len].setTickets(null);
+        return Passenger_data[len];
+    }
+
 
 
 
