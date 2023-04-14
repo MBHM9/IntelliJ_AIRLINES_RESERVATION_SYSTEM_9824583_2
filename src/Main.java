@@ -82,7 +82,11 @@ public class Main {
                         } else if (enter_option_user.equals("5")) {///////////<5> Booked ticket
 
                         } else if (enter_option_user.equals("6")) {///////////<6> Add charge
-
+                            System.out.println("account credit : "+Passenger_login.getCharge());
+                            System.out.println("Enter the amount of your credit increase:");
+                            int charge_new = input.nextInt();
+                            Passenger_login = Login_set.add_charge(Passenger_login.getUser(), charge_new);
+                            System.out.println("New account credit : "+Passenger_login.getCharge());
                         } else {
                             System.out.println("Wrong operand try again!");
                         }

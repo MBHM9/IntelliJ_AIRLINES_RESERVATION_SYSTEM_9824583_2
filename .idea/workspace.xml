@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="admin and user login set">
+    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="menu user set and setup for exit to first menu and change password">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login_set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_set.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
       <updated>1681417994876</updated>
       <workItem from="1681417996096" duration="2474000" />
       <workItem from="1681480497011" duration="5913000" />
-      <workItem from="1681508755685" duration="1522000" />
+      <workItem from="1681508755685" duration="3178000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -149,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681488675981</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="menu user set and setup for exit to first menu and change password">
+      <created>1681510545707</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681510545707</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +186,7 @@
     <MESSAGE value="add function for check user and pass match to same data" />
     <MESSAGE value="edit sign up and check that" />
     <MESSAGE value="admin and user login set" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin and user login set" />
+    <MESSAGE value="menu user set and setup for exit to first menu and change password" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu user set and setup for exit to first menu and change password" />
   </component>
 </project>

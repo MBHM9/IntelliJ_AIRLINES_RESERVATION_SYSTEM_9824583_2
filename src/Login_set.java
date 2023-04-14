@@ -80,7 +80,16 @@ public class Login_set {
 
 
 
-
+    public Passenger_data add_charge(String user_ac , int charge_var){
+        for (int i = 0; i < Passenger_data.length; i++) {
+            if(Passenger_data[i]!=null && Passenger_data[i].getUser().equals(user_ac)){
+                int charge = Passenger_data[i].getCharge();
+                Passenger_data[i].setCharge(charge+charge_var);
+                return Passenger_data[i];
+            }
+        }
+        return null;
+    }
 
 
 
