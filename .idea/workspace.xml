@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="complete add new flight by admins and save it">
+    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="add find flight for edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Data_flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data_flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
       <workItem from="1681584496615" duration="5190000" />
       <workItem from="1681660296630" duration="1066000" />
       <workItem from="1681722056323" duration="1337000" />
-      <workItem from="1681765349709" duration="3021000" />
+      <workItem from="1681765349709" duration="4928000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -176,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681768253874</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add find flight for edit">
+      <created>1681768422661</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681768422661</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +216,8 @@
     <MESSAGE value="menu user set and setup for exit to first menu and change password" />
     <MESSAGE value="credit increase menu" />
     <MESSAGE value="complete add new flight by admins and save it" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete add new flight by admins and save it" />
+    <MESSAGE value="add find flight for edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="add find flight for edit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

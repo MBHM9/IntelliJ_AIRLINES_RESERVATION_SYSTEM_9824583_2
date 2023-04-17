@@ -18,7 +18,7 @@ public class Data_flight {
 
     public boolean check_schedule_id(String id_check){
         for (int i = 0; i < Flight_schedule.length; i++) {
-            if(Flight_schedule[i]!=null && Flight_schedule[i].getFlight_id() == id_check){
+            if(Flight_schedule[i]!=null && Flight_schedule[i].getFlight_id().equals(id_check)){
                 return false;
             }
         }
@@ -34,13 +34,13 @@ public class Data_flight {
         return 0;
     }
 
-    public Flight_schedule find_schedule (String id_check){
+    public int find_schedule (String id_check){
         for (int i = 0; i < Flight_schedule.length; i++) {
-            if(Flight_schedule[i]!=null && Flight_schedule[i].getFlight_id() == id_check){
-                return Flight_schedule[i];
+            if(Flight_schedule[i]!=null && Flight_schedule[i].getFlight_id().equals(id_check)){
+                return i;
             }
         }
-        return null;
+        return 1000000;
     }
 
     @Override

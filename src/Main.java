@@ -5,8 +5,8 @@ public class Main {
         Flight_schedule[] Flight_schedule = new Flight_schedule[100000];
 
 
-        //Flight_schedule[0] = new Flight_schedule("WX-12", "Yazd", "Tehran", 1402, 5, 2, 12, 15, 700, 100,0);
-        //Flight_schedule[1] = new Flight_schedule("GA-12", "Yazd", "Esfahan", 1402, 5, 5, 22, 30, 400, 50,0);
+        Flight_schedule[0] = new Flight_schedule("WX-12", "Yazd", "Tehran", 1402, 5, 2, 12, 15, 700, 100,1);
+        Flight_schedule[1] = new Flight_schedule("GA-12", "Tehran", "Esfahan", 1402, 12, 11, 10, 15, 400, 50,1);
 
         Passenger_data[] Passenger_data = new Passenger_data[1000000];
         Passenger_data[0] = new Passenger_data("mohammad", "1234", 5000, null);
@@ -110,7 +110,61 @@ public class Main {
                             } else if (enter_option_admin.equals("2")) {/////////////<2> Update
                                 System.out.println("Enter ID flight:");
                                 String edit_id = input.next();
-
+                                int loc_id = Data_flight.find_schedule(edit_id);
+                                if(loc_id == 1000000){
+                                    System.out.println("Flight ID not found!");
+                                }else{
+                                    boolean edit_flight = true;
+                                    while (edit_flight) {
+                                        System.out.println("ID : " + Flight_schedule[loc_id].getFlight_id());
+                                        System.out.println("<1> origin : " + Flight_schedule[loc_id].getOrigin());
+                                        System.out.println("<2> destination : " + Flight_schedule[loc_id].getDestination());
+                                        System.out.println("<3> date : " + Flight_schedule[loc_id].getDate_year() + "/" + Flight_schedule[loc_id].getDate_month() + "/" + Flight_schedule[loc_id].getDate_date());
+                                        System.out.println("<4> time : " + Flight_schedule[loc_id].getTime_H() + ":" + Flight_schedule[loc_id].getTime_M());
+                                        System.out.println("<5> price : " + Flight_schedule[loc_id].getPrice());
+                                        System.out.println("<6> seats : " + Flight_schedule[loc_id].getSeats());
+                                        System.out.println("<0> out edit");
+                                        System.out.println("Enter edit field:");
+                                        String field_edit = input.next();
+                                        if (field_edit.equals("1")) { ///////////origin edit
+                                            System.out.println("Enter new origin :");
+                                            String new_origin_edit = input.next();
+                                            Flight_schedule[loc_id].setOrigin(new_origin_edit);
+                                        } else if (field_edit.equals("2")) { ///////////destination edit
+                                            System.out.println("Enter new destination :");
+                                            String new_destination_edit = input.next();
+                                            Flight_schedule[loc_id].setDestination(new_destination_edit);
+                                        } else if (field_edit.equals("3")) { ///////////date edit
+                                            System.out.println("Enter new date by format 14XX/XX/XX :");
+                                            String new_date_edit = input.next();
+                                            char[] new_date_format_edit = new_date_edit.toCharArray();
+                                            int new_year_edit = (new_date_format_edit[0]-48)*1000 + (new_date_format_edit[1]-48)*100 + (new_date_format_edit[2]-48)*10 + (new_date_format_edit[3]-48)*1;
+                                            int new_month_edit = (new_date_format_edit[5]-48)*10 + (new_date_format_edit[6]-48)*1;
+                                            int new_day_edit = (new_date_format_edit[8]-48)*10 + (new_date_format_edit[9]-48)*1;
+                                            Flight_schedule[loc_id].setDate_year(new_year_edit);
+                                            Flight_schedule[loc_id].setDate_month(new_month_edit);
+                                            Flight_schedule[loc_id].setDate_date(new_day_edit);
+                                        } else if (field_edit.equals("4")) { ///////////time edit
+                                            System.out.println("Enter new time by format XX:XX :");
+                                            String new_time_edit = input.next();
+                                            char[] new_time_format_edit = new_time_edit.toCharArray();
+                                            int new_hour_edit = (new_time_format_edit[0]-48)*10 + (new_time_format_edit[1]-48)*1;
+                                            int new_min_edit = (new_time_format_edit[3]-48)*10 + (new_time_format_edit[4]-48)*1;
+                                            Flight_schedule[loc_id].setTime_M(new_min_edit);
+                                            Flight_schedule[loc_id].setTime_H(new_hour_edit);
+                                        } else if (field_edit.equals("5")) { ///////////price edit
+                                            System.out.println("Enter new price flight :");
+                                            int new_price_edit = input.nextInt();
+                                            Flight_schedule[loc_id].setPrice(new_price_edit);
+                                        } else if (field_edit.equals("6")) { ///////////seats edit
+                                            System.out.println("Enter new number of seats flight :");
+                                            int new_seats_edit = input.nextInt();
+                                            Flight_schedule[loc_id].setSeats(new_seats_edit);
+                                        } else if (field_edit.equals("0")) { ///////////Esc edit
+                                            edit_flight = false;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
