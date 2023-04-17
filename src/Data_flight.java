@@ -34,7 +34,14 @@ public class Data_flight {
         return 0;
     }
 
-
+    public Flight_schedule find_schedule (String id_check){
+        for (int i = 0; i < Flight_schedule.length; i++) {
+            if(Flight_schedule[i]!=null && Flight_schedule[i].getFlight_id() == id_check){
+                return Flight_schedule[i];
+            }
+        }
+        return null;
+    }
 
     @Override
     public String toString() {
