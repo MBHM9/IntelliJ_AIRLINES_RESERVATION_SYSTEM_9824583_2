@@ -165,6 +165,28 @@ public class Main {
                                         }
                                     }
                                 }
+                            } else if (enter_option_admin.equals("3")) {/////////////<3> Remove
+                                System.out.println("Enter ID flight:");
+                                String edit_id = input.next();
+                                int loc_id_remove = Data_flight.find_schedule(edit_id);
+                                if(loc_id_remove == 1000000){
+                                    System.out.println("Flight ID not found!");
+                                }else {
+                                    System.out.println("ID : " + Flight_schedule[loc_id_remove].getFlight_id());
+                                    System.out.println("origin : " + Flight_schedule[loc_id_remove].getOrigin());
+                                    System.out.println("destination : " + Flight_schedule[loc_id_remove].getDestination());
+                                    System.out.println("date : " + Flight_schedule[loc_id_remove].getDate_year() + "/" + Flight_schedule[loc_id_remove].getDate_month() + "/" + Flight_schedule[loc_id_remove].getDate_date());
+                                    System.out.println("time : " + Flight_schedule[loc_id_remove].getTime_H() + ":" + Flight_schedule[loc_id_remove].getTime_M());
+                                    System.out.println("price : " + Flight_schedule[loc_id_remove].getPrice());
+                                    System.out.println("seats : " + Flight_schedule[loc_id_remove].getSeats());
+
+                                    System.out.println("if you want remove flight press YES/NO");
+                                    String remove_ok = input.next();
+                                    if(remove_ok.equals("YES")) {
+                                        Flight_schedule[loc_id_remove]  = null;
+                                        System.out.println("flight removed successfully");
+                                    }
+                                }
                             }
                         }
                     }
