@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="complete edit menu and test data">
+    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="complete remove menu by id flight">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -56,7 +56,7 @@
       <workItem from="1681660296630" duration="1066000" />
       <workItem from="1681722056323" duration="1337000" />
       <workItem from="1681765349709" duration="5200000" />
-      <workItem from="1681814768328" duration="373000" />
+      <workItem from="1681814768328" duration="1568000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681770576626</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="complete remove menu by id flight">
+      <created>1681815246330</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681815246330</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +232,8 @@
     <MESSAGE value="complete add new flight by admins and save it" />
     <MESSAGE value="add find flight for edit" />
     <MESSAGE value="complete edit menu and test data" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete edit menu and test data" />
+    <MESSAGE value="complete remove menu by id flight" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete remove menu by id flight" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,8 +5,9 @@ public class Main {
         Flight_schedule[] Flight_schedule = new Flight_schedule[100000];
 
 
-        Flight_schedule[0] = new Flight_schedule("WX-12", "Yazd", "Tehran", 1402, 5, 2, 12, 15, 700, 100,1);
-        Flight_schedule[1] = new Flight_schedule("GA-12", "Tehran", "Esfahan", 1402, 12, 11, 10, 15, 400, 50,1);
+        Flight_schedule[0] = new Flight_schedule("WX-12", "Yazd", "Tehran", 1402, 5, 2, 12, 15, 700000, 100,1);
+        Flight_schedule[1] = new Flight_schedule("GA-12", "Tehran", "Esfahan", 1402, 12, 11, 10, 15, 400000, 50,1);
+        Flight_schedule[2] = new Flight_schedule("CA-24", "Esfahan", "yazd", 1402, 5, 12, 15, 30, 650000, 0,1);
 
         Passenger_data[] Passenger_data = new Passenger_data[1000000];
         Passenger_data[0] = new Passenger_data("mohammad", "1234", 5000, null);
@@ -222,7 +223,37 @@ public class Main {
                         } else if (enter_option_user.equals("2")) {///////////<2> Search flight tickets
 
                         } else if (enter_option_user.equals("3")) {///////////<3> Booking ticket
+                            System.out.println("Enter ID flight:");
+                            String Booking_id = input.next();
+                            int loc_id_Booking = Data_flight.find_schedule(Booking_id);
+                            if(loc_id_Booking == 1000000){
+                                System.out.println("Flight ID not found!");
+                            }else {
+                                System.out.println("ID : " + Flight_schedule[loc_id_Booking].getFlight_id());
+                                System.out.println("origin : " + Flight_schedule[loc_id_Booking].getOrigin());
+                                System.out.println("destination : " + Flight_schedule[loc_id_Booking].getDestination());
+                                System.out.println("date : " + Flight_schedule[loc_id_Booking].getDate_year() + "/" + Flight_schedule[loc_id_Booking].getDate_month() + "/" + Flight_schedule[loc_id_Booking].getDate_date());
+                                System.out.println("time : " + Flight_schedule[loc_id_Booking].getTime_H() + ":" + Flight_schedule[loc_id_Booking].getTime_M());
+                                System.out.println("price : " + Flight_schedule[loc_id_Booking].getPrice());
+                                System.out.println("seats : " + Flight_schedule[loc_id_Booking].getSeats());
+                                System.out.println("if you want reserved this flight for "+Flight_schedule[loc_id_Booking].getPrice()+"Tomans press YES/NO");
+                                String Booking_ok = input.next();
+                                if(Booking_ok.equals("YES")){
+                                    if(Flight_schedule[loc_id_Booking].getSeats() >= 1) {
+                                        if (Passenger_login.getCharge() >= Flight_schedule[loc_id_Booking].getPrice()) {
+                                            int old_charge_booking = Passenger_login.getCharge();
+                                            old_charge_booking = old_charge_booking - Flight_schedule[loc_id_Booking].getPrice();
+                                            Passenger_login.setCharge(old_charge_booking);
 
+
+                                        }else {
+                                            System.out.println("Sorry your account balance is not enough to buy tickets");
+                                        }
+                                    }else {
+                                        System.out.println("Sorry this flight seats are full!");
+                                    }
+                                }
+                            }
                         } else if (enter_option_user.equals("4")) {///////////<4> Ticket cancellation
 
                         } else if (enter_option_user.equals("5")) {///////////<5> Booked ticket
