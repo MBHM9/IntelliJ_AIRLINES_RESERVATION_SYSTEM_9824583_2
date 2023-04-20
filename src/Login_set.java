@@ -36,6 +36,15 @@ public class Login_set {
         return null;
     }
 
+    public int find_user_id_num (String user_f, String pass_f){
+        for (int i = 0; i < Passenger_data.length; i++) {
+            if(Passenger_data[i]!=null && Passenger_data[i].getUser().equals(user_f) && Passenger_data[i].getPass().equals(pass_f) ){
+                return i;
+            }
+        }
+        return 1000000;
+    }
+
     public Admin_data find_admin (String admin_user_f, String admin_pass_f){
         for (int i = 0; i < Admin_data.length; i++) {
             if(Admin_data[i]!=null && Admin_data[i].getUser_admin().equals(admin_user_f) && Admin_data[i].getPass_admin().equals(admin_pass_f) ){

@@ -10,8 +10,9 @@ public class Main {
         Flight_schedule[2] = new Flight_schedule("CA-24", "Esfahan", "yazd", 1402, 5, 12, 15, 30, 650000, 0,1);
 
         Passenger_data[] Passenger_data = new Passenger_data[1000000];
-        Passenger_data[0] = new Passenger_data("mohammad", "1234", 5000, null);
-        Passenger_data[1] = new Passenger_data("Ali", "5863", 1500, null);
+        String[][] tickets_array = new String[1000000][200];
+        Passenger_data[0] = new Passenger_data("mohammad", "1234", 500000, tickets_array[0]);
+        Passenger_data[1] = new Passenger_data("Ali", "5863", 1500, tickets_array[1]);
 
         Admin_data[] Admin_data = new Admin_data[10];
         Admin_data[0] = new Admin_data("admin1", "123456");
@@ -193,6 +194,7 @@ public class Main {
                     }
                 } else {
                     /////////////start passenger menu
+                    int id_num_search = Login_set.find_user_id_num(user_enter, pass_enter);
                     boolean passenger_menu = true;
                     while (passenger_menu) {
                         System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
@@ -247,9 +249,10 @@ public class Main {
                                             int old_seats_booking = Flight_schedule[loc_id_Booking].getSeats();
                                             Flight_schedule[loc_id_Booking].setSeats(old_seats_booking - 1);
                                             int old_passnum = Flight_schedule[loc_id_Booking].getId_passenger();
-                                            String ID_user_flight =  String.format("%s|%05d", Flight_schedule[loc_id_Booking].getFlight_id(), old_passnum);
+                                            String ID_user_flight =  String.format("%sTARS%05d", Flight_schedule[loc_id_Booking].getFlight_id(), old_passnum);
                                             Flight_schedule[loc_id_Booking].setId_passenger(old_passnum + 1);
-
+                                            Login_set.set_ticket(Passenger_login.getUser(), ID_user_flight);
+                                            System.out.println("Ticket  "+ID_user_flight+"     purchase was successful ");
                                         }else {
                                             System.out.println("Sorry your account balance is not enough to buy tickets");
                                         }
@@ -261,6 +264,26 @@ public class Main {
                         } else if (enter_option_user.equals("4")) {///////////<4> Ticket cancellation
 
                         } else if (enter_option_user.equals("5")) {///////////<5> Booked ticket
+                            boolean reserved_out = false;
+                            for (int i = 0; i < tickets_array[id_num_search].length; i++) {
+                                if(tickets_array[id_num_search][i] == null){
+                                    i = tickets_array[id_num_search].length;
+                                }else {
+                                    String[] t_ids = tickets_array[id_num_search][i].split("TARS"); ///// to airline.....
+                                    int ID_num = Data_flight.find_schedule(t_ids[0]);
+                                    System.out.println(tickets_array[id_num_search][i]+" :");
+                                    System.out.println("ID : " + Flight_schedule[ID_num].getFlight_id());
+                                    System.out.println("origin : " + Flight_schedule[ID_num].getOrigin());
+                                    System.out.println("destination : " + Flight_schedule[ID_num].getDestination());
+                                    System.out.println("date : " + Flight_schedule[ID_num].getDate_year() + "/" + Flight_schedule[ID_num].getDate_month() + "/" + Flight_schedule[ID_num].getDate_date());
+                                    System.out.println("time : " + Flight_schedule[ID_num].getTime_H() + ":" + Flight_schedule[ID_num].getTime_M());
+                                    System.out.println("..........................................................");
+                                    reserved_out = true;
+                                }
+                            }
+                            if(reserved_out == false){
+                                System.out.println("Reserved tickets are not available");
+                            }
 
                         } else if (enter_option_user.equals("6")) {///////////<6> Add charge
                             System.out.println("account credit : "+Passenger_login.getCharge());
@@ -281,7 +304,7 @@ public class Main {
                     System.out.println("Enter your user password:");
                     String pass_new = input.next();
                     int free_space = Login_set.find_space();
-                    Passenger_data[free_space] = new Passenger_data(user_new, pass_new, 0, null);
+                    Passenger_data[free_space] = new Passenger_data(user_new, pass_new, 0, tickets_array[free_space]);
                     System.out.println("welcome to airline\nUser : "+Passenger_data[free_space].getUser()+"\nPass : "+Passenger_data[free_space].getPass());
                 }else {
                     System.out.println("The username is already used!");
