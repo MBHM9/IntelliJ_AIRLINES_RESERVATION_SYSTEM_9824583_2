@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="menu show all reserved ticket for users">
+    <list default="true" id="b44de4f9-cd90-4ff1-b35d-3abacad91704" name="Changes" comment="set cancelling menu by 10% deducted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -59,7 +59,7 @@
       <workItem from="1681814768328" duration="2532000" />
       <workItem from="1681896368054" duration="2525000" />
       <workItem from="1682006763482" duration="2355000" />
-      <workItem from="1682022608749" duration="2516000" />
+      <workItem from="1682022608749" duration="4666000" />
     </task>
     <task id="LOCAL-00001" summary="create start menu and comment out">
       <created>1681418158949</created>
@@ -222,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682024736944</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="set cancelling menu by 10% deducted">
+      <created>1682025185072</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1682025185072</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +267,8 @@
     <MESSAGE value="start reserved ticket menu" />
     <MESSAGE value="function save id specific for any tickets" />
     <MESSAGE value="menu show all reserved ticket for users" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu show all reserved ticket for users" />
+    <MESSAGE value="set cancelling menu by 10% deducted" />
+    <option name="LAST_COMMIT_MESSAGE" value="set cancelling menu by 10% deducted" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

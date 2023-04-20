@@ -223,6 +223,13 @@ public class Main {
                                 System.out.println("old pass is wrong!");
                             }
                         } else if (enter_option_user.equals("2")) {///////////<2> Search flight tickets
+                            System.out.println("Enter ID flight:");
+                            System.out.println("Enter date flight by format 14XX/XX/XX :");
+                            String search_date = input.next();
+                            System.out.println("Enter new origin :");
+                            String search_origin = input.next();
+                            System.out.println("Enter new destination :");
+                            String search_destination = input.next();
 
                         } else if (enter_option_user.equals("3")) {///////////<3> Booking ticket
                             System.out.println("Enter ID flight:");
@@ -278,7 +285,15 @@ public class Main {
                                     System.out.println("Are you sure? press YES/NO");
                                     String cancelling_check_ok = input.next();
                                     if(cancelling_check_ok.equals("YES")){
-
+                                        tickets_array[id_num_search][i] = null;
+                                        int old_seats_cancelling = Flight_schedule[ID_num_cancelling].getSeats();
+                                        Flight_schedule[ID_num_cancelling].setSeats(old_seats_cancelling + 1);
+                                        int price_cancelling = Flight_schedule[ID_num_cancelling].getPrice();
+                                        price_cancelling = price_cancelling - price_cancelling/10;
+                                        int charge_cancelling = Passenger_login.getCharge();
+                                        Passenger_login.setCharge(charge_cancelling + price_cancelling);
+                                        System.out.println("Ticket cancellation was successful");
+                                        i = tickets_array[id_num_search].length;
                                     }
                                 }
                             }
