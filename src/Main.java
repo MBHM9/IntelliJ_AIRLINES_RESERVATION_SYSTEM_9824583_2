@@ -262,7 +262,29 @@ public class Main {
                                 }
                             }
                         } else if (enter_option_user.equals("4")) {///////////<4> Ticket cancellation
+                            System.out.println("Enter ticket id to cancelling (10% of the ticket price will be deducted");
+                            String cancelling_id = input.next();
+                            boolean check_cancelling = false;
+                            for (int i = 0; i < tickets_array[id_num_search].length; i++) {
+                                if(cancelling_id.equals(tickets_array[id_num_search][i])){
+                                    check_cancelling = true;
+                                    String[] t_ids = tickets_array[id_num_search][i].split("TARS"); ///// to airline.....
+                                    int ID_num_cancelling = Data_flight.find_schedule(t_ids[0]);
+                                    System.out.println("ID : " + Flight_schedule[ID_num_cancelling].getFlight_id());
+                                    System.out.println("origin : " + Flight_schedule[ID_num_cancelling].getOrigin());
+                                    System.out.println("destination : " + Flight_schedule[ID_num_cancelling].getDestination());
+                                    System.out.println("date : " + Flight_schedule[ID_num_cancelling].getDate_year() + "/" + Flight_schedule[ID_num_cancelling].getDate_month() + "/" + Flight_schedule[ID_num_cancelling].getDate_date());
+                                    System.out.println("time : " + Flight_schedule[ID_num_cancelling].getTime_H() + ":" + Flight_schedule[ID_num_cancelling].getTime_M());
+                                    System.out.println("Are you sure? press YES/NO");
+                                    String cancelling_check_ok = input.next();
+                                    if(cancelling_check_ok.equals("YES")){
 
+                                    }
+                                }
+                            }
+                            if(check_cancelling == false){
+                                System.out.println("ticket not found!");
+                            }
                         } else if (enter_option_user.equals("5")) {///////////<5> Booked ticket
                             boolean reserved_out = false;
                             for (int i = 0; i < tickets_array[id_num_search].length; i++) {
