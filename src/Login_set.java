@@ -66,7 +66,19 @@ public class Login_set {
         return true;
     }
 
-
+    public void set_ticket(String user_t, String ticket_id){
+        for (int i = 0; i < Passenger_data.length; i++) {
+            if( Passenger_data[i]!=null && Passenger_data[i].getUser().equals(user_t) ){
+                String[] tickets = Passenger_data[i].getTickets();
+                for (int j = 0; j < tickets.length; j++) {
+                    if(tickets[j] == null){
+                        tickets[j] = ticket_id;
+                        j = tickets.length;
+                    }
+                }
+            }
+        }
+    }
 
 
     public int find_space (){

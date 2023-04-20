@@ -244,7 +244,11 @@ public class Main {
                                             int old_charge_booking = Passenger_login.getCharge();
                                             old_charge_booking = old_charge_booking - Flight_schedule[loc_id_Booking].getPrice();
                                             Passenger_login.setCharge(old_charge_booking);
-
+                                            int old_seats_booking = Flight_schedule[loc_id_Booking].getSeats();
+                                            Flight_schedule[loc_id_Booking].setSeats(old_seats_booking - 1);
+                                            int old_passnum = Flight_schedule[loc_id_Booking].getId_passenger();
+                                            String ID_user_flight =  String.format("%s|%05d", Flight_schedule[loc_id_Booking].getFlight_id(), old_passnum);
+                                            Flight_schedule[loc_id_Booking].setId_passenger(old_passnum + 1);
 
                                         }else {
                                             System.out.println("Sorry your account balance is not enough to buy tickets");
