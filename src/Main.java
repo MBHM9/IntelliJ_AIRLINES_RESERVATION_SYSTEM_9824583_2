@@ -8,6 +8,8 @@ public class Main {
         Flight_schedule[0] = new Flight_schedule("WX-12", "Yazd", "Tehran", 1402, 5, 2, 12, 15, 700000, 100,1);
         Flight_schedule[1] = new Flight_schedule("GA-12", "Tehran", "Esfahan", 1402, 12, 11, 10, 15, 400000, 50,1);
         Flight_schedule[2] = new Flight_schedule("CA-24", "Esfahan", "yazd", 1402, 5, 12, 15, 30, 650000, 0,1);
+        Flight_schedule[3] = new Flight_schedule("CB-45", "Esfahan", "yazd", 1402, 5, 12, 20, 15, 750000, 50,1);
+        Flight_schedule[4] = new Flight_schedule("CR-32", "Esfahan", "yazd", 1402, 5, 12, 22, 0, 800000, 20,1);
 
         Passenger_data[] Passenger_data = new Passenger_data[1000000];
         String[][] tickets_array = new String[1000000][200];
@@ -189,6 +191,34 @@ public class Main {
                                         System.out.println("flight removed successfully");
                                     }
                                 }
+                            }else if(enter_option_admin.equals("4")){/////////////<4> Flight schedule
+                                System.out.println("Enter origin :");
+                                String search_origin = input.next();
+                                System.out.println("Enter destination :");
+                                String search_destination = input.next();
+                                System.out.println("Enter date flight by format 14XX/XX/XX :");
+                                String search_date = input.next();
+                                char[] search_date_format = search_date.toCharArray();
+                                int search_year = (search_date_format[0]-48)*1000 + (search_date_format[1]-48)*100 + (search_date_format[2]-48)*10 + (search_date_format[3]-48)*1;
+                                int search_month = (search_date_format[5]-48)*10 + (search_date_format[6]-48)*1;
+                                int search_day = (search_date_format[8]-48)*10 + (search_date_format[9]-48)*1;
+                                System.out.println("|FlightId   |Origin        |Destination   |Date         |Time     |Price     |Seats|");
+                                System.out.println("....................................................................................");
+                                boolean search_ok = false;
+                                for (int i = 0; i < Flight_schedule.length; i++) {
+                                    if(Flight_schedule[i]!=null && Flight_schedule[i].getOrigin().equals(search_origin) && Flight_schedule[i].getDestination().equals(search_destination) && Flight_schedule[i].getDate_year() == search_year && Flight_schedule[i].getDate_month() == search_month && Flight_schedule[i].getDate_date() == search_day) {
+                                        search_ok = true;
+                                        String show_price = String.format("%d",Flight_schedule[i].getPrice());
+                                        String show_Seats = String.format("%d",Flight_schedule[i].getSeats());
+                                        String show_search = String.format("|%-11s|%-14s|%-14s|%d-%02d-%02d   |%02d:%02d    |%-10s|%-5s|", Flight_schedule[i].getFlight_id(), Flight_schedule[i].getOrigin(), Flight_schedule[i].getDestination(), Flight_schedule[i].getDate_year(), Flight_schedule[i].getDate_month(), Flight_schedule[i].getDate_date(), Flight_schedule[i].getTime_H(), Flight_schedule[i].getTime_M(), show_price, show_Seats);
+                                        System.out.println(show_search);
+                                        System.out.println("....................................................................................");
+                                    }
+                                }
+
+                                if(search_ok == false){
+                                    System.out.println("not found!");
+                                }
                             }
                         }
                     }
@@ -223,15 +253,36 @@ public class Main {
                                 System.out.println("old pass is wrong!");
                             }
                         } else if (enter_option_user.equals("2")) {///////////<2> Search flight tickets
-                            System.out.println("Enter ID flight:");
+                            System.out.println("Enter origin :");
+                            String search_origin = input.next();
+                            System.out.println("Enter destination :");
+                            String search_destination = input.next();
                             System.out.println("Enter date flight by format 14XX/XX/XX :");
                             String search_date = input.next();
-                            System.out.println("Enter new origin :");
-                            String search_origin = input.next();
-                            System.out.println("Enter new destination :");
-                            String search_destination = input.next();
+                            char[] search_date_format = search_date.toCharArray();
+                            int search_year = (search_date_format[0]-48)*1000 + (search_date_format[1]-48)*100 + (search_date_format[2]-48)*10 + (search_date_format[3]-48)*1;
+                            int search_month = (search_date_format[5]-48)*10 + (search_date_format[6]-48)*1;
+                            int search_day = (search_date_format[8]-48)*10 + (search_date_format[9]-48)*1;
+                            System.out.println("|FlightId   |Origin        |Destination   |Date         |Time     |Price     |Seats|");
+                            System.out.println("....................................................................................");
+                            boolean search_ok = false;
+                            for (int i = 0; i < Flight_schedule.length; i++) {
+                                if(Flight_schedule[i]!=null && Flight_schedule[i].getOrigin().equals(search_origin) && Flight_schedule[i].getDestination().equals(search_destination) && Flight_schedule[i].getDate_year() == search_year && Flight_schedule[i].getDate_month() == search_month && Flight_schedule[i].getDate_date() == search_day) {
+                                    search_ok = true;
+                                    String show_price = String.format("%d",Flight_schedule[i].getPrice());
+                                    String show_Seats = String.format("%d",Flight_schedule[i].getSeats());
+                                    String show_search = String.format("|%-11s|%-14s|%-14s|%d-%02d-%02d   |%02d:%02d    |%-10s|%-5s|", Flight_schedule[i].getFlight_id(), Flight_schedule[i].getOrigin(), Flight_schedule[i].getDestination(), Flight_schedule[i].getDate_year(), Flight_schedule[i].getDate_month(), Flight_schedule[i].getDate_date(), Flight_schedule[i].getTime_H(), Flight_schedule[i].getTime_M(), show_price, show_Seats);
+                                    System.out.println(show_search);
+                                    System.out.println("....................................................................................");
+                                }
+                            }
 
-                        } else if (enter_option_user.equals("3")) {///////////<3> Booking ticket
+                            if(search_ok == false){
+                                System.out.println("not found!");
+                            }
+
+
+                            } else if (enter_option_user.equals("3")) {///////////<3> Booking ticket
                             System.out.println("Enter ID flight:");
                             String Booking_id = input.next();
                             int loc_id_Booking = Data_flight.find_schedule(Booking_id);

@@ -43,6 +43,7 @@ public class Data_flight {
         return 1000000;
     }
 
+
     @Override
     public String toString() {
         return "Data_flight{" +
